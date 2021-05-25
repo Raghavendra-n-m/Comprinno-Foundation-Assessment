@@ -4,19 +4,19 @@ using namespace std;
 int main()
 {
     int t;
-    cin>>t;
+    cin>>t; // number of test cases
     while(t--)
     {
         int n,i,j,b=1;
-        cin>>n;
+        cin>>n; // size of the array
         int a[n];
         j=n-1;
         for(i=0; i<n; i++)
             {
-                cin>>a[i];
+                cin>>a[i]; // reading the array
             }
         if(n%2==0)
-            cout<<"no\n";
+            cout<<"no\n"; // if size of the array is even print no
         else
         {
             i=0;
