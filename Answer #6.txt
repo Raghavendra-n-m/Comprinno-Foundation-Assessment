@@ -1,0 +1,23 @@
+//cats and dogs
+#include <iostream>
+using namespace std;
+int main()
+{
+    int t;
+    cin >> t;//number of test cases
+    while (t--)
+    {
+        long long int c, d, l, max, min;
+        cin >> c >> d >> l;//reading number of cats
+        max = 4 * (c + d);
+        if (c <= 2 * d)
+            min = 4 * d;
+        else
+            min = 4 * c - 4 * d;
+        if (l % 4 != 0 || l < min || l > max)
+            cout << "no" << endl;
+        else
+            cout << "yes" << endl;
+    }
+    return 0;
+}
