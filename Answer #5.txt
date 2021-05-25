@@ -1,0 +1,39 @@
+// Beautiful Array
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t; //Number of test cases
+	while(t--){
+	   
+	    int n,k,f=0,count= 0,c2=0,c1=0;
+	    
+	    cin>>n;  //size of thw array
+	    int v[n];
+	    for(int i = 0; i < n; i++){
+	        cin>>k;
+	        v[i]=k; //reading array
+	    }
+	    for(int i = 0; i < n; i++){
+	       if(v[i]!= 0 && v[i]!= 1 && v[i]!= -1){
+	           count++;
+	       }
+	       else if(v[i]== 1){
+	           c1++;
+	       }
+	       else if(v[i] == -1){
+	           c2++;
+	       }
+	    }
+	    
+	    if((count <= 1 && c2==0)||(count ==0 && ((c2<=1)||(c1>0 && c2>1)))){ 
+	        cout<<"yes"<<endl; //if the number exits in the array print yes
+	    }
+	    else{
+	        cout<<"no"<<endl;
+	    }
+	    
+	}
+	return 0;
+}
