@@ -1,0 +1,28 @@
+// Two Numbers
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;// number of test cases
+	while(t--){
+	   long int a,b,n;
+	    cin>>a>>b>>n; //reading numbers
+	   
+	    for(long int i=1;i<=n;i++){
+	        if(i%2!=0){
+	            a=a*2;
+	        }
+	        else if(i%2==0){
+	            b=b*2;
+	        }
+	    }
+	    
+	    int div;
+	    div=max(a,b)/min(a,b);
+	    cout<<div<<'\n';   
+	    
+	}
+	return 0;
+}
