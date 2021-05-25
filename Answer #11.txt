@@ -1,0 +1,28 @@
+// id and Ship
+#include<iostream>
+using namespace std;
+
+int main(){
+
+	int tests;
+	cin>>tests; // number of test cases
+
+	for(int t=1; t<=tests; t++){
+		char ch;
+		cin>>ch; // reading choice
+		if(ch=='B' || ch=='b'){
+			cout<<"BattleShip"<<endl; //if choice is b then print BattleShip
+		}
+		else if(ch=='C' || ch=='c'){
+			cout<<"Cruiser"<<endl;  //if choice is c then print Cruiser
+		}
+		else if(ch=='D' || ch=='d'){
+			cout<<"Destroyer"<<endl; //if choice is d then print Destroyer
+		}
+		else{
+			cout<<"Frigate"<<endl;   // else print  Frigate
+		}
+	}
+
+	return 0;
+}
