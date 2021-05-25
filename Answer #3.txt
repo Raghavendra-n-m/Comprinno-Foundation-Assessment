@@ -1,0 +1,62 @@
+// Temple Land
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,i,j,b=1;
+        cin>>n;
+        int a[n];
+        j=n-1;
+        for(i=0; i<n; i++)
+            {
+                cin>>a[i];
+            }
+        if(n%2==0)
+            cout<<"no\n";
+        else
+        {
+            i=0;
+            while(i<j)
+            {
+                if(a[0]!=1)
+                {
+                    b=0;
+                    break;
+                }
+                if(a[i]!=a[i+1]-1)
+                {
+                    b=0;
+                    break;
+                }
+                 if(a[j]!=a[j-1]-1)
+                {
+                    b=0;
+                    break;
+                }
+                if(a[i]!=a[j])
+                {
+                    b=0;
+                    break;
+                }
+                i++;
+                j--;
+            }
+
+            if(b==1)
+            {
+                cout<<"yes"<<endl;
+            }
+            if(b==0)
+            {
+                cout<<"no"<<endl;
+            }
+        }
+
+
+    }
+    return 0;
+}
